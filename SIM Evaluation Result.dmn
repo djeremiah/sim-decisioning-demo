@@ -1,11 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_B068D4DA-BDCE-40D5-B2FD-46C0D0E30D23" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_31FA82A6-0C85-4510-AE70-82C3FE476EC7" name="Untitled" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_B068D4DA-BDCE-40D5-B2FD-46C0D0E30D23">
   <dmn:extensionElements/>
+  <dmn:inputData id="_FD1368EE-9E0F-4EC9-9EFA-342370A37153" name="Claim Crop">
+    <dmn:extensionElements/>
+    <dmn:variable id="_666DC718-45C0-49C8-8E87-74FD92A42647" name="Claim Crop" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_2D5C80F2-E40B-435E-85B0-9A4F33350A1B" name="First Crop">
+    <dmn:extensionElements/>
+    <dmn:variable id="_A0B89678-A233-428A-98EC-8CD5D54E511F" name="First Crop" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_6608ACEC-514C-4BF5-9236-85730CD033D0" name="Second Crop">
+    <dmn:extensionElements/>
+    <dmn:variable id="_36A3B27E-171F-4787-8717-B45C7F9A93F1" name="Second Crop" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_5103F62E-8C5D-4BC3-8DCC-14C0C68BB590" name="First Crop Confidence">
+    <dmn:extensionElements/>
+    <dmn:variable id="_71FF0822-50FF-431B-809F-A55F93CDC1D1" name="First Crop Confidence" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:inputData id="_4C8F034D-2C8C-439E-BA94-20D515C4ED7F" name="Second Crop Confidence">
+    <dmn:extensionElements/>
+    <dmn:variable id="_DFEE97F2-D66E-4E5A-BA23-2084FAE517DA" name="Second Crop Confidence" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:inputData id="_118FD59C-C7B0-43A4-A423-BC6342922D05" name="Cardinality Pass?">
+    <dmn:extensionElements/>
+    <dmn:variable id="_E3FEABA7-81DD-4A75-B6A5-CEE82B2B428E" name="Cardinality Pass?" typeRef="boolean"/>
+  </dmn:inputData>
+  <dmn:decision id="_024F4F76-6E46-4B66-9296-C0A08D4BCF22" name="Payment Band">
+    <dmn:extensionElements/>
+    <dmn:variable id="_C8B6F94D-2E59-4557-A37E-CDDDBECF8222" name="Payment Band"/>
+    <dmn:relation id="_C57A9349-12BF-4253-B3DA-4A3F6017DC56">
+      <dmn:column id="_4D184C73-76B2-4876-A1CF-A6942E95FCBB" name="Crop" typeRef="string"/>
+      <dmn:column id="_EF9CE3E7-2BB3-44D6-AB96-D9ADF0AB252C" name="Payment Band" typeRef="number"/>
+      <dmn:row id="_EC94DEC5-24AF-4935-9969-4E032003532E">
+        <dmn:literalExpression id="_07F92108-9FBA-4568-A239-0864CB426DBF">
+          <dmn:text>Winter Oats</dmn:text>
+        </dmn:literalExpression>
+        <dmn:literalExpression id="_10851C33-A6FE-4EDD-AD87-D08916892032">
+          <dmn:text>250</dmn:text>
+        </dmn:literalExpression>
+      </dmn:row>
+    </dmn:relation>
+  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_7EAE9572-0393-4151-95B3-7672E83CEA49" name="DRG">
       <di:extension>
-        <kie:ComponentsWidthsExtension/>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_C57A9349-12BF-4253-B3DA-4A3F6017DC56">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_07F92108-9FBA-4568-A239-0864CB426DBF"/>
+          <kie:ComponentWidths dmnElementRef="_10851C33-A6FE-4EDD-AD87-D08916892032"/>
+        </kie:ComponentsWidthsExtension>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_FD1368EE-9E0F-4EC9-9EFA-342370A37153" dmnElementRef="_FD1368EE-9E0F-4EC9-9EFA-342370A37153" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="264.5981308411215" y="458.3421052631579" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_2D5C80F2-E40B-435E-85B0-9A4F33350A1B" dmnElementRef="_2D5C80F2-E40B-435E-85B0-9A4F33350A1B" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="540.5981308411215" y="458" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_6608ACEC-514C-4BF5-9236-85730CD033D0" dmnElementRef="_6608ACEC-514C-4BF5-9236-85730CD033D0" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="817" y="458" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_5103F62E-8C5D-4BC3-8DCC-14C0C68BB590" dmnElementRef="_5103F62E-8C5D-4BC3-8DCC-14C0C68BB590" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="679" y="458" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_4C8F034D-2C8C-439E-BA94-20D515C4ED7F" dmnElementRef="_4C8F034D-2C8C-439E-BA94-20D515C4ED7F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="955" y="458" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_118FD59C-C7B0-43A4-A423-BC6342922D05" dmnElementRef="_118FD59C-C7B0-43A4-A423-BC6342922D05" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="402.5981308411215" y="458" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_024F4F76-6E46-4B66-9296-C0A08D4BCF22" dmnElementRef="_024F4F76-6E46-4B66-9296-C0A08D4BCF22" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="611" y="264" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </dmn:definitions>
