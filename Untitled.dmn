@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_B068D4DA-BDCE-40D5-B2FD-46C0D0E30D23" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_31FA82A6-0C85-4510-AE70-82C3FE476EC7" name="Untitled" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_B068D4DA-BDCE-40D5-B2FD-46C0D0E30D23">
   <dmn:extensionElements/>
-  <dmn:decision id="_F37F95F6-930D-4246-813D-503DB947D099" name="Parcel Score">
-    <dmn:extensionElements/>
-    <dmn:variable id="_BB250804-EDAD-4C33-8A54-0DD954283F4E" name="Parcel Score"/>
-  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_7EAE9572-0393-4151-95B3-7672E83CEA49" name="DRG">
       <di:extension>
         <kie:ComponentsWidthsExtension/>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-drg-_F37F95F6-930D-4246-813D-503DB947D099" dmnElementRef="_F37F95F6-930D-4246-813D-503DB947D099" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="872" y="160" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </dmn:definitions>
